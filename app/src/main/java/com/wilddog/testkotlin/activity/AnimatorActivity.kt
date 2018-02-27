@@ -13,11 +13,11 @@ class AnimatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animator)
 
-        var retation: ObjectAnimator = ObjectAnimator.ofFloat(iv_animator,"retation",0f,360f)
+        var retation: ObjectAnimator = ObjectAnimator.ofFloat(iv_animator,"rotation",0f,360f)
         var transAnimator : ObjectAnimator = ObjectAnimator.ofFloat(iv_animator,"alpha",1.0f,0.5f,0.8f,1f)
         var set = AnimatorSet()
         set.playTogether(retation,transAnimator)
-        set.setDuration(1000)
+        set.setDuration(5000)
         set.start()
     }
 
